@@ -310,3 +310,15 @@ function popfun () {
     let popup = document.getElementById("myPopup")
     popup.classList.toggle('show')
 }
+
+
+let acc = document.getElementsByClassName("accrodion")
+let i
+
+for(i=0; i < acc.length; i++) {
+   acc[i].onclick = function () {
+    this.classList.toggle("active")
+
+    this.nextElementSibling.classList.toggle("show")
+   }
+}
