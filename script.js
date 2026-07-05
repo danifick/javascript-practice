@@ -384,3 +384,23 @@ function newElement() {
 } 
 
 
+function myClick () {
+    let x = document.getElementById("myDiv1")
+    if(x.style.display === 'none') {
+       x.style.display = 'block' 
+    } else {
+        x.style.display = 'none'
+    }
+}
+
+let close1 = document.getElementsByClassName("closebtn")
+let p
+for(p=0; p < close1.length; p++) {
+    close1[p].onclick = function () {
+        let div = this.parentElement
+        div.style.opacity = "0"
+        setTimeout(function() {
+            div.style.display = "none"
+        }, 600)
+    }
+}
